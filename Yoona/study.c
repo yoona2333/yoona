@@ -31,3 +31,66 @@ int main()
 * 汇编：将汇编语言转化为机器语言（二进制码）
 * 链接：将C语言依赖库链接到程序中
 **/
+//#include<stdio.h>
+//int main()
+//{
+//	char ch = 'a';
+//	int age = 10;
+//	short num = 10;
+//	float weight = 55.5;
+//	double yy = 2.3;
+//	printf("%d\n", sizeof(char));
+//	printf("%d\n", sizeof(int));
+//	printf("%d\n", sizeof(float));
+//	printf("%d\n", sizeof(double));
+//	printf("%d\n", sizeof(long));
+//	printf("%d\n", sizeof(long long));
+//	return 0;
+//}
+//#include<stdio.h>
+//#define	max 10
+//int main()
+//{
+//	int a = max;
+//	int arr[max] = { 0 };
+//	printf("a=%d\n", a);
+//	//int age = 22;
+//	//age = age++;
+//	//int a = 0;
+//	//int b = 0;
+//	//int sum = 0;
+//	//scanf_s("%d %d", &a, &b);
+//	//sum = a + b;
+//	//printf("%d\n", sum);
+//	//printf("%d\n", sizeof(char));//4
+//	return 0;
+//}
+//当局部变量和全局变量名字冲突时，局部优先
+//#include<stdio.h>
+//enum sex//枚举类型的变量的未来的可能取值
+//{
+//	male=3,//赋初值
+//	famale,
+//	secret
+//};
+//int main()
+//{
+//	enum sex s = male;
+//	printf("%d\n", male);//3
+//	printf("%d\n", famale);//4
+//	printf("%d\n", secret);//5
+//	return 0;
+//}
+//字符串就是一串字符吗，用双引号引起来的,字符串在结尾的位置隐藏了一个\0的字符,仅仅作为结束标志
+#include<stdio.h>
+int main()
+{
+	char arr[] = "abc";
+	char arr1[] = { 'a','\0','c','\0','g'};
+	int len = strlen("abc");
+
+	//printf("%d\n", len);
+	printf("%d\n", strlen(arr));//strlen函数是找\0，找到就停止
+	printf("%d\n", strlen(arr1));
+	return 0;
+}
