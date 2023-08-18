@@ -654,9 +654,9 @@ int main()
 	char arr2[] = { "hello" };
 	strcpy(arr1, arr2);
 	printf("%s\n", arr1);*/
-	/*return 0;
+/*return 0;
 	}*/
-	/*void swap(int* pa, int* pb)//地址会交换
+/*void swap(int* pa, int* pb)//地址会交换
 	{
 		int z = 0;
 		z = *pa;
@@ -674,7 +674,7 @@ int main()
 
 		return 0;
 	}*/
-	/*#include<stdio.h>
+/*#include<stdio.h>
 	int is_prime(int n)
 	{
 		int j = 0;//2---n-1之间的数
@@ -703,7 +703,7 @@ int main()
 		printf("%d\n", count);
 		return 0;
 	}*/
-	/*#include<stdio.h>
+/*#include<stdio.h>
 	int nn(int a[], int k, int s)
 	{
 		int left = 0;
@@ -823,7 +823,7 @@ int main()
 //	printf("%d\n", ret);
 //	return 0;
 //}
-#include<stdio.h>
+/*#include<stdio.h>
 int fib(int n)
 {
 	int a = 1;
@@ -840,13 +840,151 @@ int fib(int n)
 	/*if (n <= 2)
 		return 1;
 	else
-		return fib(n - 1) + fib(n - 2);*/
-}
+		return fib(n - 1) + fib(n - 2);
+}*/
+/*#include<stdio.h>
 int main()
 {
-	int n = 0;
+	int i = 1;//打印行
+	for (i = 1; i < 10; i++)
+	{
+		int j = 0;
+		for (j = 1; j <=i; j++)
+		{
+			printf("%d*%d=%d ", i, j, i * j);
+		}
+		printf("\n");
+	}
+	/*
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	int i = 0;
+	int max = 0;
+	for (i = 0; i < 11; i++)
+	{
+		if (arr[i] > max)
+		{
+			max = arr[i];
+		}
+	}
+	printf("%d\n", max);*/
+/*int i = 0;
+	double  sum = 0.0;
+	for (i = 1; i < 101; i++)
+	{
+		if (i % 2 == 0)
+			sum -= 1.0 / i;
+		else
+			sum += 1.0 / i;
+	}
+	printf("%lf\n", sum);*/
+/*int i = 0;
+	int count = 0;
+	for(i=1;i < 101; i++)
+	{
+		if (i % 10 == 9)
+		{
+			count++;
+		}
+		if (i / 10 == 9)
+		{
+			count++;
+		}
+	}
+	printf("%d\n", count);*/
+/*int n = 0;
 	scanf_s("%d", &n);
 	int ret = fib(n);
-	printf("%d\n", ret);
-		return 0;
+	printf("%d\n", ret);*/
+//return 0;
+//}
+//#include<stdio.h>
+// printtable(int n)
+//{
+//	int i = 0;
+//	for (i = 1; i <= n; i++)
+//	{
+//		int j = 0;
+//		for (j = 1; j <= i; j++)
+//		{
+//			printf("%d*%d=%d  ", i, j, i * j);
+//		}
+//		printf("\n");
+//	}
+//}
+//int main()
+//{
+//	int n = 0;
+//	scanf_s("%d", &n);
+//	printtable(n);
+//	return 0;
+//}
+//#include<stdio.h>
+//mystrlen(char* str)
+//{
+//	int count = 0;
+//	while(*str != '\0')
+//	{
+//		count++;
+//		str++;
+//	}
+//	return count;
+//}
+//reverse(char* str)
+//{
+//	int left = 0;
+//	int right = mystrlen(str) - 1;
+//	while (left < right)
+//	{
+//		char tmp = str[left];
+//		str[left] = str[right];
+//		str[right] = tmp;
+//		left++;
+//		right--;
+//	}
+//}
+//int main()
+//{
+//
+//	char arr[] = "abcdef";
+//	reverse(arr);
+//	printf("%s\n", arr);
+//	return 0;
+//}
+//#include<stdio.h>
+////dig(int n)
+////{
+////	if (n > 9)
+////	{
+////		return dig(n / 10) + n % 10;
+////	}
+////	else
+////		return n;
+////}
+//pow(int n,int k)
+//{
+//	if (k== 0)
+//		return 1.0;
+//	else if(k>0)
+//		return n * pow(n, k - 1);
+//	else
+//		return 1.0 * pow(n, k - 1);
+//	
+//}
+//int main()
+//{
+//	/*int num = 1729;
+//	int sum = dig(num);
+//	printf("%d\n", sum);*/
+//	int n = 0;
+//	int k = 0;
+//	scanf_s("%d %d", &n, &k);
+//	double ret = pow(n, k);
+//	printf("%lf\n", ret);
+//	return 0;
+//}
+#include<stdio.h>
+int main()
+{
+
+	return 0;
 }
