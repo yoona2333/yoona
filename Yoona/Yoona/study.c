@@ -982,6 +982,86 @@ int main()
 //	printf("%lf\n", ret);
 //	return 0;
 //}
+/*#include<stdio.h>
+int main()
+{
+	//int arr[3][4];//三行四列
+	//int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	//int* p = arr;
+	//int i = 0;
+	//for (i = 1; i <=10; i++)//数组在内存中是连续存放的
+	//{
+	//	printf("%d ", *p);
+	//	p++;
+	//}
+	int arr[][4] = { {1,2 },{3,4},{5,6}};//行可以省略
+	int i = 0;
+	int j = 0;
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 4; j++)
+		{
+			//printf("%d", arr[i][j]);
+			printf("%p\n", &arr[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}*/
+//void mao(int arr[], int sz)//形参arr本质上是指针
+//{
+//	//int sz = sizeof(arr) / sizeof(arr[0]);//计算数组的元素个数
+//	int i = 0;
+//	for (i = 0; i < sz-1; i++)//确定躺数
+//	{
+//		int j = 0;//一趟冒泡排序
+//		for (j = 0; j < sz-1-i; j++)
+//		{
+//			if (arr[j] > arr[j + 1])
+//			{
+//				int tmp = arr[j];
+//				arr[j] = arr[j + 1];
+//				arr[j + 1] = tmp;
+//
+//			}
+//		}
+//		printf("%d ", arr[j]);
+//
+//	}
+//
+//}
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int arr[] = { 9,8,7,6,5,4,3,2,1,0 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);//计算数组的元素个数
+//
+//	mao(arr,sz);//数组传参传的是数组首元素的地址
+//	/*int arr[][4] = { {1,2 },{3,4},{5,6}};
+//	int* p = &arr[0][0];
+//	int i = 0;
+//	for (i = 0; i < 12; i++)
+//	{
+//		printf("%d ", *p);
+//		p++;
+//	}*/
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	//sizeof（数组名）数组名表示整个数组，计算的是整个数组的大小，单位是字节
+//	//&数组名  数组名表示整个数组 取出的是整个数组的地址
+//	int arr[10] = { 0 };
+//	printf("%p\n", &arr);//取出的是数组的地址
+//	/*printf("%d\n", sizeof(arr));
+//	printf("%p\n", &arr[0]);
+//	printf("%p\n", arr);
+//	//数组名就是首元素的地址
+//	printf("%p\n", &arr);*/
+//	return 0;
+//}
 #include<stdio.h>
 int main()
 {
