@@ -1062,9 +1062,160 @@ int main()
 //	printf("%p\n", &arr);*/
 //	return 0;
 //}
+//#include<stdio.h>
+//struct book
+//{
+//	char name[20];
+//	char id[20];
+//	int price;
+//};
+//int main()
+//{
+//	int num = 10;
+//	struct book b = { "c语言","c123456",55};
+//	struct book* pb = &b;
+//	printf("书名:%s\n", pb->name);
+//	printf("书号:%s\n", pb->id);
+//	printf("价格:%d\n", pb->price);
+//	printf("书名:%s\n", (*pb).name);
+//	printf("书号:%s\n", (*pb).id);
+//	printf("价格:%d\n", (*pb).price);
+//	printf("书名:%s\n", b.name);
+//	printf("书号:%s\n", b.id);
+//	printf("价格:%d\n", b.price);
+//	return 0;
+//}
+//#include<stdio.h>
+//void init(int arr[], int sz)
+//{
+//	int i = 0;
+//	for (i = 0; i < sz; i++)
+//	{
+//		arr[i] = 0;
+//	}
+//}
+//void print(int arr[], int sz)
+//{
+//	int i = 0;
+//	for(i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	printf("\n");
+//}
+//void reverse(int arr[], int sz)
+//{
+//	int left = 0;
+//	int right = sz - 1;
+//	while (left < right)
+//	{	
+//		int tmp = arr[left];
+//		arr[left] = arr[right];
+//		arr[right] = tmp;
+//		left++;
+//		right--;
+//	}
+//
+//}
+//int main()
+//{
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10};
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	print(arr, sz);
+//	reverse(arr, sz);
+//	print(arr, sz);
+//
+//	init(arr, sz);
+//	print(arr, sz);
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int arr1[] = { 1,3,5,7,9 };
+//	int arr2[] = { 2,4,6,8,10 };
+//	int sz = sizeof(arr1) / sizeof(arr1[0]);
+//	int i = 0;
+//
+//	for (i = 0; i < sz; i++)
+//	{
+//		int tmp = arr1[i];
+//		arr1[i] = arr2[i];
+//		arr2[i] = tmp;
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	//指针类型的意义：
+//	//指针类型决定了指针解引用的权限有多大
+//	//指针类型决定了指针走一步，能走多远（步长距离）
+//	int arr[10] = { 0 };
+//	int* p = arr;
+//	char* pc = arr;
+//	printf("%p\n", p);
+//	printf("%p\n", p + 1);
+//	printf("%p\n", pc);
+//	printf("%p\n", pc + 1);
+//	return 0;
+//}
+//野指针就是指针指向的位置是不可知的（随机的，不正确的，没有明确限制的）
+//#include<stdio.h>
+//int main()
+//{
+//	//这里的p就是一个野指针
+//	//int* p;//p是一个局部的指针变量，局部变量不初始化的话，
+//	//*p = 20;//非法访问内存
+//	//当前不知道p应该初始化为什么地址的时候，直接初始化为null
+//	//C语言本身不会检查数据的越界行为的
+//	int arr[10] = { 0 };
+//	int* p = arr;
+//	int i = 0;
+//	for (i = 0; i <= 10; i++)//越界访问
+//	{
+//		*p = i;
+//		p++;
+//	}
+//	return 0;
+//}
+//指针减去指针得到的是两个指针之间的元素的个数
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 10;
+//	int* pa = &a;
+//	int** ppa = &pa;
+//	**ppa = 10000;
+//	printf("%d\n", **ppa);
+//	return 0;
+//}
+//结构是一些值的集合，这些值称为成员变量，结构的每个成员可以是不同类型的变量
 #include<stdio.h>
+struct B 
+{
+	char c;
+	short s;
+	double d;
+};
+struct stu
+{
+	struct B sb;
+	char name[20];
+	int age;
+	char id[20];
+}s1, s2;//也是结构体变量 属于全局变量
 int main()
 {
+	struct stu s = { {'w',20,3.14},"张三",200,"12456645"};
+	/*printf("%c", s.sb.c);
+	printf("%s", s.id);
+	printf("%s", s.name);
+	printf("%lf", s.sb.d);*/
+	struct stu* ps = &s;
+	printf("%d", (*ps).age);
+	printf("%c", ps->sb.c);
+	printf("%s", ps->name);
 
 	return 0;
 }
