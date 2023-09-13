@@ -1368,14 +1368,14 @@ int main()
 	int n = 0;
 	int i = 0;
 	int j = 0;
-	double sum=0.0;
+	double sum=0;
 	scanf_s("%d", &n);
-	for (int i = 0; i < n; i++)
+	for (int i = 1; i <= n; i++)
 	{
-		sum = sum + i / (2*i - 1);
+		sum = sum + (double)i / (2*i - 1);
 		i = -i;
 	}
-	printf("%0.3lf", sum);
+	printf("%.3lf", sum);
 
 
 	return 0;
