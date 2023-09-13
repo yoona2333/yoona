@@ -1191,31 +1191,192 @@ int main()
 //	return 0;
 //}
 //结构是一些值的集合，这些值称为成员变量，结构的每个成员可以是不同类型的变量
+//#include<stdio.h>
+//struct B 
+//{
+//	char c;
+//	short s;
+//	double d;
+//};
+//struct stu
+//{
+//	struct B sb;
+//	char name[20];
+//	int age;
+//	char id[20];
+//}s1, s2;//也是结构体变量 属于全局变量
+//int main()
+//{
+//	struct stu s = { {'w',20,3.14},"张三",200,"12456645"};
+//	/*printf("%c", s.sb.c);
+//	printf("%s", s.id);
+//	printf("%s", s.name);
+//	printf("%lf", s.sb.d);*/
+//	struct stu* ps = &s;
+//	printf("%d", (*ps).age);
+//	printf("%c", ps->sb.c);
+//	printf("%s", ps->name);
+//
+//	return 0;
+//}
+//const修饰变量，这个变量就被称为常变量，不能被修改，但本质上还是变量
+//#include <stdio.h>//断言
+//#include <assert.h>
+//void my_strlen(char* dest,const char* src)
+//{
+//	assert(src != NULL);
+//	while (*dest++ = *src++)
+//	{
+//		;
+//	}
+//}
+//int main()
+//{
+//	char arr1[20] = "xxxxxxxxxxxxx";
+//	char arr2[] = "hello";
+//	my_strlen(arr1, arr2);
+//	printf("%s\n", arr1);
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	const int num= 10;
+//	const int* p = &num;//const如果放在*号的左边表示*p指向的内容是不能通过指针来改变的
+//	//但是指针变量本身是可以修改的
+//	//int* p = &num;
+//	//int*const p=&num;
+//	//const放在右边时，修饰的是指针变量p，表示指针变量不能被改变，但指针指针的内容可以被改变
+//	int n = 20;
+//	p = &n; 
+//	printf("%d\n", num);
+//	return 0;
+//}
+//#include<stdio.h>
+//#include<assert.h>
+//strleng(const char* str)
+//{
+//	assert(str != NULL);
+//	//assert(str);
+//	int count = 0;
+//	while (*str != '\0')
+//	{
+//		count++;
+//		str++;
+//	}
+//	return count;
+//}
+//int main()
+//{
+//	char arr[] = "abcd";
+//	int len = strleng(arr);
+//	printf("%d\n", len);
+//
+//	return 0;
+//}
+//大端子节序：把数据的地位字节序的内容放在高地址处，高位字节序的内容就存放在低地址处11223344
+//小端字节序：把数据的低位字节的内容放在低地址处，高位字节序的内容存放在高地址处44332211
+//#include<stdio.h>
+//int check()
+//{
+//	int a = 1;
+//	char* p = (char*)&a;
+//	if (*p == 1)
+//	{
+//		return 1;
+//	}
+//	else 
+//	{
+//		return 0;
+//	}
+//}
+//int main()
+//{
+//	int ret = check();
+//	if (ret == 1)
+//	{
+//		printf("xiaodaun\n");
+//	}
+//	else
+//	{
+//		printf("daduan\n");
+//	}
+//	//int a = 1;
+//	//char* p = (char*)&a;//char*p   *p其实访问的就是一个字节
+//	//if (*p== 1)
+//	//{
+//	//	printf("xiaodaun\n");
+//	//}
+//	//else
+//	//	printf("dadaun\n");
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+
+	/*int i = 7;
+	char  arr1[];
+	scanf_s("%c", &arr1);
+	while (i>=6&&i<=13)
+	{
+		printf("%c", &arr1[i]);
+		i++;
+	}
+	*/
+//#include<stdio.h> 
+//int main()
+//{
+//	char s[18];
+//	scanf_s("%s", s);
+//	printf("%c%c%c%c-%c%c-%c%c\n", s[6], s[7], s[8], s[9], s[10], s[11], s[12], s[13]);
+//	return 0;
+//}
+//#include <stdio.h>
+//#include <math.h>
+//int main()
+//{
+//	int a = 0;
+//	int n,i;
+//	int b = 0;
+//
+//	scanf_s("%d", &n);
+//	if (n == 1)
+//	{
+//		printf("No");
+//	}
+//	else {
+//		for ( i = 2; i  < n; i++)
+//		{
+//			if (n % i == 0)
+//			{
+//				a++;
+//			}
+//		}
+//
+//		if (a == 0)
+//		{
+//			printf("Yes");
+//		}
+//		else
+//			printf("No");
+//	}
+//	return 0;
+//}
 #include<stdio.h>
-struct B 
-{
-	char c;
-	short s;
-	double d;
-};
-struct stu
-{
-	struct B sb;
-	char name[20];
-	int age;
-	char id[20];
-}s1, s2;//也是结构体变量 属于全局变量
 int main()
 {
-	struct stu s = { {'w',20,3.14},"张三",200,"12456645"};
-	/*printf("%c", s.sb.c);
-	printf("%s", s.id);
-	printf("%s", s.name);
-	printf("%lf", s.sb.d);*/
-	struct stu* ps = &s;
-	printf("%d", (*ps).age);
-	printf("%c", ps->sb.c);
-	printf("%s", ps->name);
+	int n = 0;
+	int i = 0;
+	int j = 0;
+	double sum=0.0;
+	scanf_s("%d", &n);
+	for (int i = 0; i < n; i++)
+	{
+		sum = sum + i / (2*i - 1);
+		i = -i;
+	}
+	printf("%0.3lf", sum);
+
 
 	return 0;
 }
